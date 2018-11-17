@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Theme color-->
+    <color name="colorPrimary">#9c7c40</color>
+    <color name="colorPrimaryDark">#735621</color>
+    <color name="colorAccent">#9c6c12</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <!--Gradient colors-->
+    <color name="gradientTextBackStart">#33000000</color>
+    <color name="gradientTextBackEnd">#80000000</color>
+    <!--Text colors-->
+    <color name="colorBlackTextTitle">#353333</color>
+    <color name="colorBlackTextSubTitle">#6c6c6c</color>
+</resources>

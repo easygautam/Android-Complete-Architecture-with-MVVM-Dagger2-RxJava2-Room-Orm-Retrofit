@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.gautams.pos.view.login.vm.LoginActivityViewModel" />
+
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/padding_24_dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_200_dp"
+                    android:contentDescription="@string/image"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/please_enter_your_detail"
+                    android:textSize="@dimen/text_size_18_sp"
+                    android:textColor="@color/colorBlackTextTitle"
+                    android:textAllCaps="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_16_dp"
+                    android:background="@drawable/round_corner_back_sub_title"
+                    android:padding="@dimen/padding_12_dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/width_24_dp"
+                        android:layout_height="@dimen/height_24_dp"
+                        android:padding="@dimen/padding_4_dp"
+                        android:contentDescription="@string/image"
+                        android:tint="@color/colorBlackTextSubTitle"
+                        app:srcCompat="@drawable/ic_share"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8_dp"
+                        bind:dropdownViewLayout="@{@layout/login_spinner_dropdown_view}"
+                        bind:viewLayout="@{@layout/login_spinner_view}"
+                        bind:list="@{viewModel.stores}">
+
+                    </Spinner>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_16_dp"
+                    android:background="@drawable/round_corner_back_sub_title"
+                    android:padding="@dimen/padding_12_dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/width_24_dp"
+                        android:layout_height="@dimen/height_24_dp"
+                        android:padding="@dimen/padding_4_dp"
+                        android:contentDescription="@string/image"
+                        android:tint="@color/colorBlackTextSubTitle"
+                        app:srcCompat="@drawable/ic_share"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/pin"
+                        android:background="@android:color/transparent"
+                        android:textSize="@dimen/text_size_15_sp"
+                        android:inputType="numberDecimal"
+                        android:layout_marginStart="@dimen/margin_8_dp">
+
+                    </EditText>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/card_corner_21_dp"
+                    android:layout_marginTop="@dimen/margin_16_dp"
+                    android:layout_marginBottom="@dimen/margin_16_dp">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_42_dp"
+                        android:background="@color/colorPrimary"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textColor="@color/colorWhite"
+                        android:text="@string/login"/>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>
+
