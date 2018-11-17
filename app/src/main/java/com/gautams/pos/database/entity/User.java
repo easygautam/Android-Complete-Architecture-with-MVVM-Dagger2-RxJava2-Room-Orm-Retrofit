@@ -8,7 +8,7 @@ import android.os.Parcelable;
 
 import java.util.Date;
 
-@Entity
+@Entity // User Entity
 public class User implements Parcelable {
 
     @PrimaryKey()
